@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugins Vanilla JS: Modal Tabs Select</title>
+
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/tabs.css" />
+    <link rel="stylesheet" href="/css/select.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+  </head>
+  <body>
+    <section>
+      <div class="tabs">
+        <div class="tabs__nav tabs-nav">
+          <div class="tabs-nav__item is-active" data-tab-name="tab-1">
+            JS Modal Plugin
+          </div>
+          <div class="tabs-nav__item" data-tab-name="tab-2">
+            JS Select Plugin
+          </div>
+          <div class="tabs-nav__item" data-tab-name="tab-3">JS Tabs Plugin</div>
+        </div>
+        
+        <div class="tabs__content">
+          <div class="tab is-active tab-1">
+            <h2>JS Modal Plugin</h2>
+            <div class="documentation">
+              <div>
+                <h3>Modal initial data</h3>
+
+                <pre>
+modal = $.modal({
+  animatonDuration: number,
+  title: string
+  closableOnButton: boolean,
+  closableOnOverlay: boolean,
+  content: string,
+  width: string,
+  buttons: [
+    {
+      text: string,
+      type: string (secondary|primary|success|danger),
+      handler(): function {
+        
+      }
+    }
+  ]
+}
+                </pre>
+              </div>
+              <div>
+                <h3>Modal Methods</h3>
+                <pre>
+open()
+close()
+setContent(html)
+disableButton()
+enableButton()
+destroy()
+                </pre>
+                <h3>Type Buttons</h3>
+                <button class="btn btn_type_secondary">secondary</button>
+                <button class="btn btn_type_primary">primary</button>
+                <button class="btn btn_type_success">success</button>
+                <button class="btn btn_type_danger">danger</button>
+              </div>
+            </div>
+            <button class="btn btn_type_primary js-button-modal">
+              Open Window
+            </button>
+          </div>
+
+          <div class="tab tab-2">
+            <h2>JS Select Plugin</h2>
+            <div class="documentation">
+              <div>
+                <h3>Select initial data</h3>
+                <pre>
+select = $.select({
+  selector: string,
+  items: [string],
+  active: number
+})
+                </pre>
+              </div>
+              <div>
+                <h3>Select</h3>
+                <div class="select"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab tab-3">
+            <h2>JS Tabs Plugin</h2>
+            <div class="documentation">
+              <div>
+                <h3>Tabs initial data</h3>
+                <pre>
+tabs = $.tabs()
+                </pre>
+              </div>
+              <div>
+                <h3>Tabs HTML</h3>
+                <xmp>
+<div class="tabs__nav tabs-nav">
+  <div class="tabs-nav__item is-active" data-tab-name="tab-1">
+    Tab 1
+  </div>
+</div>
+<div class="tabs__content">
+  <div class="tab is-active tab-1">
+    Tab 1 contetn
+  </div>
+</div>
+                </xmp>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="base.js"></script>
+    <script src="plugins/tabs.js"></script>
+    <script src="plugins/select.js"></script>
+    <script src="plugins/modal.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

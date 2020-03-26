@@ -1,0 +1,152 @@
+.modal.modal_state_open .modal__window,
+.modal.modal_state_open .modal__overlay {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.modal_state_hide .modal__window,
+.modal.modal_state_hide .modal__overlay {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.modal_state_open .modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.modal_state_open .modal__window {
+  transform: translateY(100px);
+}
+
+.modal.modal_state_hide .modal__overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal.modal_state_hide .modal__window {
+  transform: translateY(-200px);
+}
+
+.modal__window,
+.modal__overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: background-color;
+  transition-timing-function: ease-in;
+}
+
+.modal__window {
+  width: 600px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  transform: translateY(-200px);
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+.modal__header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.modal__title {
+  font-size: 1.5rem;
+}
+
+.modal__close {
+  cursor: pointer;
+}
+
+.modal__close:focus {
+  outline: auto;
+}
+
+.modal__body {
+  padding: 10px;
+}
+
+.modal__body p {
+  margin: 0 0 5px;
+}
+
+.modal__footer {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__footer button {
+  margin-right: 10px;
+}
+
+.modal__footer button:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.btn:disabled {
+  background-color: #dddddd;
+}
+
+.btn:disabled:hover {
+  background: #dddddd;
+  cursor: auto;
+}
+
+.btn_type_secondary {
+  background-color: #6c757d;
+}
+.btn_type_secondary:hover {
+  background: #5a6268 radial-gradient(circle, transparent 1%, #5a6268 1%)
+    center/15000%;
+}
+
+.btn_type_primary {
+  background-color: #2196f3;
+}
+.btn_type_primary:hover {
+  background: #0069d9 radial-gradient(circle, transparent 1%, #0069d9 1%)
+    center/15000%;
+}
+
+.btn_type_success {
+  background-color: #1e7e34;
+}
+.btn_type_success:hover {
+  background: #218838 radial-gradient(circle, transparent 1%, #218838 1%)
+    center/15000%;
+}
+
+.btn_type_danger {
+  background-color: #e43b4b;
+}
+.btn_type_danger:hover {
+  background: #c82333 radial-gradient(circle, transparent 1%, #c82333 1%)
+    center/15000%;
+}
